@@ -1,0 +1,12 @@
+[Desktop Entry]
+# locale to ~/.config/autostart/
+Type=Application
+Exec=/home/sageadm/bin/start-sage-client-browser.sh
+Hidden=false
+NoDisplay=false
+X-GNOME-Autostart-enabled=true
+Name[zh_TW]=start-sage-client
+Name=start-sage-client
+Comment[zh_TW]=
+Comment=
+X-GNOME-Autostart-Delay=0
