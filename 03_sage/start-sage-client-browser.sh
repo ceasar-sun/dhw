@@ -9,7 +9,7 @@ export LC_ALL=C
 
 DISPLAY_ID=""
 MONITOR_WIDTH=1920
-DISPLAY_URL="https://master:9090/display.html\?clientID="
+DISPLAY_URL="https://master:9090/display.html?clientID="
 BROWSER_PARAM="--use-gl --allow-file-access-from-files --kiosk --no-default-browser-check  --disable-session-crashed-bubble  --disable-popup-blocking --no-first-run --allow-running-insecure-content"
 
 #######
