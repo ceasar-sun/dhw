@@ -1,0 +1,4 @@
+google-chrome --window-size=1920,1080 --window-position=1920,0 $param --app=https://localhost:9090/display.html\?clientID=3 &
+google-chrome --window-size=1920,1080 --window-position=3840,0 $param --app=https://localhost:9090/display.html\?clientID=6 &
+google-chrome --window-size=1920,1080 --window-position=5760,0 $param --app=https://localhost:9090/display.html\?clientID=9 &
+ 

@@ -1,0 +1,13 @@
+service x11vnc
+{
+        port            = 5900
+        type            = UNLISTED
+        socket_type     = stream
+        protocol        = tcp
+        wait            = no
+        user            = root
+        server          = /usr/bin/x11vnc
+        server_args     = -inetd -xkb -o /var/log/x11vnc.log -auth guess -display :0 -many -bg -scale 10/10 -rfbauth /etc/x11vnc.pass -localhost
+        disable         = no
+}
+

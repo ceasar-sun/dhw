@@ -1,0 +1,4 @@
+
+BIOS:
+F2: Enter BIOS
+F12/Del : Boot device 
