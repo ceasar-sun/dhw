@@ -5,14 +5,18 @@
 # To create 0,1,2,3  (for node-3)
 ##########
 
+export LC_ALL=C
+
 DISPLAY_ID=""
 MONITOR_WIDTH=1920
 DISPLAY_URL="https://master:9090/display.html\?clientID="
 BROWSER_PARAM="--use-gl --allow-file-access-from-files --kiosk --no-default-browser-check  --disable-session-crashed-bubble  --disable-popup-blocking --no-first-run --allow-running-insecure-content"
 
-hostname="$(hostname)"
-
+#######
 # Main
+#######
+
+hostname="$(hostname)"
 
 while [ $# -gt 0 ]; do
 	case "$1" in
@@ -31,6 +35,9 @@ elif [ -z "$DISPLAY_ID"  -a "$hostname"  ==  'Ceasar-PC' ] ; then
 else
 	echo "no match config for '$hostname' .  Exit !!"
 fi
+
+# Start nulti-monitor
+/home/sageadm/bin/multi-monitor.sh
 
 for i in $DISPLAY_ID ; do
 	_session_dir="$HOME/.config/sage-chrome.cache/pid-${i}"
