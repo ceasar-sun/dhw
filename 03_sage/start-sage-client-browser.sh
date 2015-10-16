@@ -38,6 +38,7 @@ fi
 
 # Start nulti-monitor
 /home/sageadm/bin/multi-monitor.sh
+sleep 3;
 
 for i in $DISPLAY_ID ; do
 	_session_dir="$HOME/.config/sage-chrome.cache/pid-${i}"
