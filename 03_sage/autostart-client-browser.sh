@@ -25,11 +25,11 @@ while [ $# -gt 0 ]; do
 done
 
 if [ -z "$DISPLAY_ID"  -a "$hostname" == 'node-1'  ] ; then
-	DISPLAY_ID="8 9 10 11"
+	DISPLAY_ID="11 10 9 8"
 elif [ -z "$DISPLAY_ID"  -a "$hostname"  ==  'node-2' ] ; then 
-	DISPLAY_ID="4 5 6 7"
+	DISPLAY_ID="7 6 5 4"
 elif [ -z "$DISPLAY_ID"  -a "$hostname"  ==  'node-3' ] ; then 
-	DISPLAY_ID="0 1 2 3"
+	DISPLAY_ID="3 2 1 0"
 elif [ -z "$DISPLAY_ID"  -a "$hostname"  ==  'Ceasar-PC' ] ; then 
 	DISPLAY_ID="7 8 9 0"
 else
@@ -37,8 +37,7 @@ else
 fi
 
 # Start nulti-monitor
-/home/sageadm/bin/multi-monitor.sh
-sleep 3;
+#/home/sageadm/bin/multi-monitor.sh
 
 for i in $DISPLAY_ID ; do
 	_session_dir="$HOME/.config/sage-chrome.cache/pid-${i}"
@@ -48,6 +47,7 @@ for i in $DISPLAY_ID ; do
 	full_comm="google-chrome $BROWSER_PARAM $sub_param "
 	echo "$full_comm"
 	$full_comm &
+	sleep 2;
 done
 
 exit 0;
